@@ -1,6 +1,8 @@
 from controller.apiclient.overpass import Overpass
+from controller.database.connection_manager import ConnectionManager
 from model.bicycle_parking import BicycleParking
 from view.terminal_view import TerminalView
+
 
 
 def overpass_connection():
@@ -18,7 +20,11 @@ def display_bicycle_parking(bicycle_parking):
     terminal_view.view_amenity_bicycle_parking(
             bicycle_parking)
 
+def set_database():
+    connection_manager = ConnectionManager()
+
 if __name__ == '__main__':
-    overpass = overpass_connection()
-    bicycle_parking = instanciate_bicycle_parking(overpass)
-    display_bicycle_parking(bicycle_parking)
+    # overpass = overpass_connection()
+    # bicycle_parking = instanciate_bicycle_parking(overpass)
+    # display_bicycle_parking(bicycle_parking)
+    set_database()

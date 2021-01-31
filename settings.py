@@ -1,3 +1,13 @@
+# DATABASE NAME
+DATABASE_NAME = "osm"
+
+HOST = 'localhost'
+
+USER = 'postgres'
+
+PASSWORD = 'postgres'
+
+
 # OVERPASS_ENDPOINT_DE
 OVERPASS_ENDPOINT_DE = "https://lz4.overpass-api.de/api/interpreter"
 
@@ -14,8 +24,9 @@ BOUND_BOX = {
         "east": 2.31969}
 
 
-# NODES
+## NODES
 
+# AMENITIES (bicycle parking for test)
 AMENITIES = """
         "bicycle_parking"
         """
