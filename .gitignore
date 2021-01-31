@@ -2,6 +2,8 @@ env/
 
 __pycache__/
 
+configuration.py
+
 workspace.code-workspace
 
 .vscode

@@ -1,6 +1,8 @@
 from psycopg2 import connect, extensions, sql
 
-from settings import HOST, USER, PASSWORD, DATABASE_NAME
+from configuration import USER, PASSWORD
+from settings import HOST, DATABASE_NAME
+
 
 class ConnectionManager:
 
