@@ -3,10 +3,6 @@ DATABASE_NAME = "osm"
 
 HOST = 'localhost'
 
-USER = 'postgres'
-
-PASSWORD = 'postgres'
-
 
 # OVERPASS_ENDPOINT_DE
 OVERPASS_ENDPOINT_DE = "https://lz4.overpass-api.de/api/interpreter"
