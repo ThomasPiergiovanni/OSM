@@ -9,12 +9,23 @@ class ConnectionManager:
                 host=HOST,
                 user=USER,
                 password=PASSWORD)
-        self.connection.set_isolation_level(extensions.ISOLATION_LEVEL_AUTOCOMMIT)
-        self.cursor = self.connection.cursor()
-        self.cursor.execute("CREATE DATABASE %s" % DATABASE_NAME)
-        self.cursor.close()
-    
+        self.connection.set_isolation_level(
+                extensions.ISOLATION_LEVEL_AUTOCOMMIT)
+        self.cursor = None
 
+    def execute(self, sql_statement):
+        self.cursor = self.connection.cursor()
+        self.cursor.execute(sql_statement)
+        self.cursor.close()
+
+    def create_database(self):
+        sql_statement = "CREATE DATABASE %s" % DATABASE_NAME
+        return sql_statement
+    
+    def drop_database(self):
+        sql_statement = "DROP DATABASE %s" % DATABASE_NAME
+        return sql_statement
+    
 
     # @classmethod
     # def use(cls):

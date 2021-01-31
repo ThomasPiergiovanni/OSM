@@ -22,6 +22,7 @@ def display_bicycle_parking(bicycle_parking):
 
 def set_database():
     connection_manager = ConnectionManager()
+    connection_manager.execute(connection_manager.create_database())
 
 if __name__ == '__main__':
     # overpass = overpass_connection()
